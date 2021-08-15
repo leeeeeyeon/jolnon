@@ -1,0 +1,46 @@
+header {
+  border-bottom: 2px solid navy;
+}
+
+header .login {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  float: right;
+  text-align: right;
+}
+
+header .t {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.bar {
+  line-height: 100px;
+  text-align: center;
+  word-spacing: 100px;
+  border-bottom: 2px solid navy;
+}
+
+.bar a:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.start_page {
+  background-color: #E8F6EF;
+  border-bottom: 2px solid navy;
+}
+
+ul {
+  list-style: none;
+}
+
+h3 {
+  margin-left: 50px;
+}
