@@ -28,7 +28,19 @@ router.get('/', function(request, response){
         </header>
       </div>
       <div class="t">
-        <h1><a href="/">JOLNON</a></h1>
+      <h1>
+        <a
+        href="https://ice.inha.ac.kr/ice/2270/subview.do"
+        target="_blank"
+        ><img
+          src="/images/logo.png"
+          alt="인하대"
+          width="40"
+          height="40"
+        /></a>
+
+        <a href="/">JOLNON</a>
+       </h1>
       </div>
 
       <div class="bar">

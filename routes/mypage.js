@@ -5,7 +5,6 @@ const router = express.Router();
 const db = require('../lib/db');
 const template = require('../lib/template');
 const auth = require('../lib/auth');
-const { response } = require('express');
 
 router.get('/jolnon', (request,response)=>{
     var title = '관심 논문';
@@ -49,7 +48,19 @@ router.get('/jolnon', (request,response)=>{
             </header>
           </div>
           <div class="t">
-            <h1><a href="/">JOLNON</a></h1>
+          <h1>
+          <a
+          href="https://ice.inha.ac.kr/ice/2270/subview.do"
+          target="_blank"
+          ><img
+            src="/images/logo.png"
+            alt="인하대"
+            width="40"
+            height="40"
+          /></a>
+  
+          <a href="/">JOLNON</a>
+         </h1>
           </div>
 
           <div class="bar">
@@ -127,7 +138,19 @@ router.get('/keyword', (request,response)=>{
           </header>
         </div>
         <div class="t">
-          <h1><a href="/">JOLNON</a></h1>
+        <h1>
+        <a
+        href="https://ice.inha.ac.kr/ice/2270/subview.do"
+        target="_blank"
+        ><img
+          src="/images/logo.png"
+          alt="인하대"
+          width="40"
+          height="40"
+        /></a>
+
+        <a href="/">JOLNON</a>
+       </h1>
         </div>
 
         <div class="bar">
@@ -202,7 +225,19 @@ router.get('/professor', (request,response)=>{
           </header>
         </div>
         <div class="t">
-          <h1><a href="/">JOLNON</a></h1>
+        <h1>
+        <a
+        href="https://ice.inha.ac.kr/ice/2270/subview.do"
+        target="_blank"
+        ><img
+          src="/images/logo.png"
+          alt="인하대"
+          width="40"
+          height="40"
+        /></a>
+
+        <a href="/">JOLNON</a>
+       </h1>
         </div>
 
         <div class="bar">
@@ -271,7 +306,19 @@ router.get('/:id', (request, response)=>{
           </header>
         </div>
         <div class="t">
-          <h1><a href="/">JOLNON</a></h1>
+        <h1>
+        <a
+        href="https://ice.inha.ac.kr/ice/2270/subview.do"
+        target="_blank"
+        ><img
+          src="/images/logo.png"
+          alt="인하대"
+          width="40"
+          height="40"
+        /></a>
+
+        <a href="/">JOLNON</a>
+       </h1>
         </div>
 
         <div class="bar">

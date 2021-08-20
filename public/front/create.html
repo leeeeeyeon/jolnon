@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JOLNON - ${title}</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="write.css" />
+  </head>
+  <body>
+    <div class="up">
+      <header>
+        <div class="login">
+          <a href="/user/login">login</a> |
+          <a href="/user/register">register</a>
+        </div>
+        <div class="t">
+          <h1><a href="/">JOLNON</a></h1>
+        </div>
+      </header>
+    </div>
+
+    <div class="bar">
+      <a href="/jolnon/year" class="on">연도별</a>
+      <a href="/jolnon/keyword">키워드별</a>
+      <a href="/jolnon/professor">지도교수님별</a>
+      <a href="/board">질문게시판</a>
+    </div>
+
+    <div class="board_wrap">
+      <div class="board_title">
+        <strong>글 작성</strong>
+      </div>
+      <div class="board_write_wrap">
+        <div class="board_write">
+          <div class="title">
+            <dl>
+              <dt>제목</dt>
+              <dd><input type="text" placeholder="제목 입력" /></dd>
+            </dl>
+          </div>
+
+          <div class="cont">
+            <textarea placeholder="내용 입력"></textarea>
+          </div>
+        </div>
+        <div class="bt_wrap">
+          <input type="button" href="write.html" class="on" value="등록"></input>
+          <a href="">취소</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

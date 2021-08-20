@@ -29,7 +29,19 @@ router.get('/year', (request, response)=>{
             </header>
           </div>
           <div class="t">
-            <h1><a href="/">JOLNON</a></h1>
+          <h1>
+          <a
+          href="https://ice.inha.ac.kr/ice/2270/subview.do"
+          target="_blank"
+          ><img
+            src="/images/logo.png"
+            alt="인하대"
+            width="40"
+            height="40"
+          /></a>
+  
+          <a href="/">JOLNON</a>
+         </h1>
           </div>
 
           <div class="bar">
@@ -80,7 +92,19 @@ router.get('/year/:year', (request, response)=>{
             </header>
           </div>
           <div class="t">
-            <h1><a href="/">JOLNON</a></h1>
+          <h1>
+          <a
+          href="https://ice.inha.ac.kr/ice/2270/subview.do"
+          target="_blank"
+          ><img
+            src="/images/logo.png"
+            alt="인하대"
+            width="40"
+            height="40"
+          /></a>
+  
+          <a href="/">JOLNON</a>
+         </h1>
           </div>
 
           <div class="bar">
@@ -132,7 +156,19 @@ router.get('/professor', (request, response)=>{
             </header>
           </div>
           <div class="t">
-            <h1><a href="/">JOLNON</a></h1>
+          <h1>
+          <a
+          href="https://ice.inha.ac.kr/ice/2270/subview.do"
+          target="_blank"
+          ><img
+            src="/images/logo.png"
+            alt="인하대"
+            width="40"
+            height="40"
+          /></a>
+  
+          <a href="/">JOLNON</a>
+         </h1>
           </div>
 
           <div class="bar">
@@ -202,7 +238,19 @@ router.get('/professor/:professor', (request, response)=>{
             </header>
           </div>
           <div class="t">
-            <h1><a href="/">JOLNON</a></h1>
+          <h1>
+          <a
+          href="https://ice.inha.ac.kr/ice/2270/subview.do"
+          target="_blank"
+          ><img
+            src="/images/logo.png"
+            alt="인하대"
+            width="40"
+            height="40"
+          /></a>
+  
+          <a href="/">JOLNON</a>
+         </h1>
           </div>
 
           <div class="bar">
@@ -273,7 +321,19 @@ router.get('/keyword', (request, response)=>{
             </header>
           </div>
           <div class="t">
-            <h1><a href="/">JOLNON</a></h1>
+          <h1>
+          <a
+          href="https://ice.inha.ac.kr/ice/2270/subview.do"
+          target="_blank"
+          ><img
+            src="/images/logo.png"
+            alt="인하대"
+            width="40"
+            height="40"
+          /></a>
+  
+          <a href="/">JOLNON</a>
+         </h1>
           </div>
 
           <div class="bar">
@@ -331,7 +391,19 @@ router.get('/keyword/:keyword', (request, response)=>{
             </header>
           </div>
           <div class="t">
-            <h1><a href="/">JOLNON</a></h1>
+          <h1>
+          <a
+          href="https://ice.inha.ac.kr/ice/2270/subview.do"
+          target="_blank"
+          ><img
+            src="/images/logo.png"
+            alt="인하대"
+            width="40"
+            height="40"
+          /></a>
+  
+          <a href="/">JOLNON</a>
+         </h1>
           </div>
 
           <div class="bar">

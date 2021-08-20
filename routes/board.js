@@ -33,7 +33,19 @@ router.get('/', function(request, response){
         </header>
       </div>
       <div class="t">
-        <h1><a href="/">JOLNON</a></h1>
+      <h1>
+      <a
+      href="https://ice.inha.ac.kr/ice/2270/subview.do"
+      target="_blank"
+      ><img
+        src="/images/logo.png"
+        alt="인하대"
+        width="40"
+        height="40"
+      /></a>
+
+      <a href="/">JOLNON</a>
+     </h1>
       </div>
 
       <div class="bar">
@@ -68,7 +80,7 @@ router.get('/create', function(request, response){
     <head>
       <title>JOLNON - ${title}</title>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="/board.css" />
+      <link rel="stylesheet" href="/create.css" />
     </head>
     <body>
       <div class="up">
@@ -79,7 +91,19 @@ router.get('/create', function(request, response){
         </header>
       </div>
       <div class="t">
-        <h1><a href="/">JOLNON</a></h1>
+      <h1>
+      <a
+      href="https://ice.inha.ac.kr/ice/2270/subview.do"
+      target="_blank"
+      ><img
+        src="/images/logo.png"
+        alt="인하대"
+        width="40"
+        height="40"
+      /></a>
+
+      <a href="/">JOLNON</a>
+     </h1>
       </div>
 
       <div class="bar">
@@ -89,15 +113,31 @@ router.get('/create', function(request, response){
         <a href="/board" class="on">질문게시판</a>
       </div>
       <br>
-      <form action="/board/create_process" method="post">
-      <p><input type="text" name="title" placeholder="title"></p>
-      <p>
-        <textarea name="description" placeholder="description"></textarea>
-      </p>
-      <p>
-        <input type="submit">
-      </p>
-    </form>
+      <div class="board_wrap">
+      <div class="board_title">
+      <strong>글 작성</strong>
+      </div>
+      <div class="board_write_wrap">
+        <form action="/board/create_process" method="post">
+          <div class="board_write">
+            <div class="title">
+              <dl>
+                <dt>제목</dt>
+                <dd><input type="text" name="title" placeholder="제목 입력" /></dd>
+              </dl>
+            </div>
+
+            <div class="cont">
+              <textarea name="description" placeholder="내용 입력"></textarea>
+            </div>
+          </div>
+          <div class="bt_wrap">
+            <input type="submit" class="on" value="등록"></input>
+            <a href="/board">취소</a>
+          </div>
+        </form>
+      </div>
+      </div>
     </body>
     </html>
     `;
@@ -153,7 +193,7 @@ router.get('/update/:pageId', function(request, response){
       <head>
         <title>JOLNON - ${title}</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/board.css" />
+        <link rel="stylesheet" href="/create.css" />
       </head>
       <body>
         <div class="up">
@@ -164,7 +204,19 @@ router.get('/update/:pageId', function(request, response){
           </header>
         </div>
         <div class="t">
-          <h1><a href="/">JOLNON</a></h1>
+        <h1>
+        <a
+        href="https://ice.inha.ac.kr/ice/2270/subview.do"
+        target="_blank"
+        ><img
+          src="/images/logo.png"
+          alt="인하대"
+          width="40"
+          height="40"
+        /></a>
+
+        <a href="/">JOLNON</a>
+       </h1>
         </div>
   
         <div class="bar">
@@ -173,16 +225,30 @@ router.get('/update/:pageId', function(request, response){
           <a href="/jolnon/professor">교수님별</a>
           <a href="/board" class="on">질문게시판</a>
         </div>
-        <form action="/board/update_process" method="post">
-        <input type="hidden" name="postId" value="${content[0].postId}">
-        <p><input type="text" name="title" placeholder="title" value="${sanitizeHtml(content[0].title)}"></p>
-        <p>
-          <textarea name="description" placeholder="description">${sanitizeHtml(content[0].description)}</textarea>
-        </p>
-        <p>
-          <input type="submit" value="글 수정">
-        </p>
-      </form>
+        <div class="board_write_wrap">
+        <div class="board_title">
+        <strong>글 수정</strong>
+        </div>
+        <form action="/board/create_process" method="post">
+          <div class="board_write">
+            <div class="title">
+              <dl>
+                <dt>제목</dt>
+                <dd><input type="text" name="title" vaule="${sanitizeHtml(content[0].title)}" placeholder="제목 입력" /></dd>
+              </dl>
+            </div>
+
+            <div class="cont">
+              <textarea name="description" placeholder="내용 입력">${sanitizeHtml(content[0].description)}</textarea>
+            </div>
+          </div>
+          <div class="bt_wrap">
+            <input type="submit" class="on" value="수정"></input>
+            <a href="/board">취소</a>
+          </div>
+        </form>
+      </div>
+      </div>
       </body>
       </html>
       `;
@@ -234,7 +300,7 @@ router.post('/delete_process', function(request,response){
       if(error) throw error;
       if(count !== board[0].user_id){
         request.flash('error', 'You cannot delete it!');
-        return response.redirect('/');
+        return response.redirect('/board');
       } else{
           db.query(`DELETE FROM board WHERE postId=?`, [id], function(error, result){
             if(error){
@@ -276,7 +342,7 @@ router.get('/:pageId', function(request, response){
         <head>
           <title>JOLNON - ${title}</title>
           <meta charset="utf-8">
-          <link rel="stylesheet" href="/board.css" />
+          <link rel="stylesheet" href="/create.css" />
         </head>
         <body>
           <div class="up">
@@ -287,7 +353,19 @@ router.get('/:pageId', function(request, response){
             </header>
           </div>
           <div class="t">
-            <h1><a href="/">JOLNON</a></h1>
+          <h1>
+          <a
+          href="https://ice.inha.ac.kr/ice/2270/subview.do"
+          target="_blank"
+          ><img
+            src="/images/logo.png"
+            alt="인하대"
+            width="40"
+            height="40"
+          /></a>
+  
+          <a href="/">JOLNON</a>
+         </h1>
           </div>
     
           <div class="bar">
@@ -298,12 +376,29 @@ router.get('/:pageId', function(request, response){
           </div>
           <div class="menu">
           <a href="/board/update/${request.params.pageId}" class="on">글수정</a>
-          <a href="/board/delete_process" class="on">글삭제</a>
+          <br><br>
+          <form action="/board/delete_process>
+          <input type="hidden" name="id" value="${request.params.pageId}" />
+          <input type="submit" value="글삭제" class="on"/>
+          </form>
           </div>
           <br>
-          <h2>${sanitizeHtml(title)}</h2>
-          ${sanitizeHtml(description)}
-          <p>by ${nickname}</p>
+          <div class="board_write_wrap">
+            <div class="board_write">
+              <div class="title">
+                <dl>
+                  <dt>제목</dt>
+                  <dd>${title}</dd>
+                </dl>
+              </div>
+  
+              <div class="title">
+                <dt>본문</dt>
+                <dd>${description}</dd>
+              </div>
+            </div>
+        </div>
+        </div>
           <h4>댓글창</h4>
           <form action="/board/comment" method="post">
           <input type="hidden" name="postId" value="${request.params.pageId}">
